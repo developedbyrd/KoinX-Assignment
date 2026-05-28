@@ -68,34 +68,56 @@ export default function HoldingsTable({
           </colgroup>
           <thead>
             <tr className="text-[14px] font-medium text-[#0F172A] dark:text-white md:text-[15px]">
-              <th className="sticky top-0 z-20 rounded-l-lg bg-[#EEF4FB] px-5 py-2 text-center align-middle dark:bg-[#0D0F17]">
+              <th
+                scope="col"
+                className="sticky top-0 z-20 rounded-l-lg bg-[#EEF4FB] px-5 py-2 text-center align-middle dark:bg-[#0D0F17]"
+              >
                 <input
                   ref={headerCheckboxRef}
                   type="checkbox"
                   checked={isAllSelected}
                   onChange={(event) => onToggleSelectAll(event.target.checked)}
+                  aria-label="Select all holdings"
                   className="h-4 w-4 cursor-pointer rounded-[3px] border-2 border-slate-400 text-[#1557FF] focus:ring-[#1557FF] dark:border-slate-500 dark:text-[#5B80FF]"
                 />
               </th>
-              <th className="sticky top-0 z-20 bg-[#EEF4FB] px-5 py-2 text-left font-medium dark:bg-[#0D0F17]">
+              <th
+                scope="col"
+                className="sticky top-0 z-20 bg-[#EEF4FB] px-5 py-2 text-left font-medium dark:bg-[#0D0F17]"
+              >
                 Asset
               </th>
-              <th className="sticky top-0 z-20 bg-[#EEF4FB] px-5 py-2 text-right font-medium dark:bg-[#0D0F17]">
+              <th
+                scope="col"
+                className="sticky top-0 z-20 bg-[#EEF4FB] px-5 py-2 text-right font-medium dark:bg-[#0D0F17]"
+              >
                 <div>Holdings</div>
-                <div className="text-[13px] font-normal text-slate-500 dark:text-slate-400 md:text-[13px]">
+                <div className="text-[13px] font-normal text-slate-600 dark:text-slate-300 md:text-[13px]">
                   Current Market Rate
                 </div>
               </th>
-              <th className="sticky top-0 z-20 bg-[#EEF4FB] px-5 py-2 text-right font-medium dark:bg-[#0D0F17]">
+              <th
+                scope="col"
+                className="sticky top-0 z-20 bg-[#EEF4FB] px-5 py-2 text-right font-medium dark:bg-[#0D0F17]"
+              >
                 Total Current Value
               </th>
-              <th className="sticky top-0 z-20 bg-[#EEF4FB] px-5 py-2 text-right font-medium dark:bg-[#0D0F17]">
+              <th
+                scope="col"
+                className="sticky top-0 z-20 bg-[#EEF4FB] px-5 py-2 text-right font-medium dark:bg-[#0D0F17]"
+              >
                 Short-term
               </th>
-              <th className="sticky top-0 z-20 bg-[#EEF4FB] px-5 py-2 text-right font-medium dark:bg-[#0D0F17]">
+              <th
+                scope="col"
+                className="sticky top-0 z-20 bg-[#EEF4FB] px-5 py-2 text-right font-medium dark:bg-[#0D0F17]"
+              >
                 Long-Term
               </th>
-              <th className="sticky top-0 z-20 rounded-r-lg bg-[#EEF4FB] px-5 py-2 text-right font-medium dark:bg-[#0D0F17]">
+              <th
+                scope="col"
+                className="sticky top-0 z-20 rounded-r-lg bg-[#EEF4FB] px-5 py-2 text-right font-medium dark:bg-[#0D0F17]"
+              >
                 Amount to Sell
               </th>
             </tr>
@@ -119,6 +141,7 @@ export default function HoldingsTable({
                       type="checkbox"
                       checked={isSelected}
                       onChange={() => onToggleSelect(item.id)}
+                      aria-label={`Select ${item.coinName}`}
                       className="h-4 w-4 cursor-pointer rounded-[3px] border-2 border-slate-400 text-[#1557FF] focus:ring-[#1557FF] dark:border-slate-500 dark:text-[#5B80FF]"
                     />
                   </td>
@@ -148,7 +171,7 @@ export default function HoldingsTable({
                     <div className="whitespace-nowrap text-[17px] font-medium text-slate-900 dark:text-white md:text-[16px]">
                       {formatHoldingAmount(item.totalHolding)} {item.coin}
                     </div>
-                    <div className="mt-1 text-[13px] text-slate-500 dark:text-slate-400 md:text-[13px]">
+                    <div className="mt-1 text-[13px] text-slate-600 dark:text-slate-300 md:text-[13px]">
                       {formatCurrencyAdaptive(item.currentPrice, 2, 6)}/
                       {item.coin}
                     </div>
@@ -162,13 +185,13 @@ export default function HoldingsTable({
                     <div
                       className={`whitespace-nowrap text-[17px] font-semibold md:text-[16px] ${
                         item.stcg.gain >= 0
-                          ? "text-emerald-500 dark:text-emerald-300"
-                          : "text-rose-500 dark:text-rose-400"
+                          ? "text-emerald-700 dark:text-emerald-300"
+                          : "text-rose-700 dark:text-rose-400"
                       }`}
                     >
                       {formatSignedCurrencyAdaptive(item.stcg.gain, 2, 6)}
                     </div>
-                    <div className="mt-1 text-[13px] text-slate-500 dark:text-slate-400 md:text-[13px]">
+                    <div className="mt-1 text-[13px] text-slate-600 dark:text-slate-300 md:text-[13px]">
                       {formatCompactNumber(item.stcg.balance, 6)} {item.coin}
                     </div>
                   </td>
@@ -176,13 +199,13 @@ export default function HoldingsTable({
                     <div
                       className={`whitespace-nowrap text-[17px] font-semibold md:text-[16px] ${
                         item.ltcg.gain >= 0
-                          ? "text-emerald-500 dark:text-emerald-300"
-                          : "text-rose-500 dark:text-rose-400"
+                          ? "text-emerald-700 dark:text-emerald-300"
+                          : "text-rose-700 dark:text-rose-400"
                       }`}
                     >
                       {formatSignedCurrencyAdaptive(item.ltcg.gain, 2, 6)}
                     </div>
-                    <div className="mt-1 text-[13px] text-slate-500 dark:text-slate-400 md:text-[13px]">
+                    <div className="mt-1 text-[13px] text-slate-600 dark:text-slate-300 md:text-[13px]">
                       {formatCompactNumber(item.ltcg.balance, 6)} {item.coin}
                     </div>
                   </td>
