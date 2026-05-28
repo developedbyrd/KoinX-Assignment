@@ -7,7 +7,7 @@ export default function HowItWorksTooltip() {
     <div className="relative inline-flex">
       <button
         type="button"
-        className="cursor-pointer text-[15px] font-semibold leading-none text-[#0A58FF] underline decoration-1 underline-offset-[5px] transition hover:text-[#0847cf] dark:text-[#4F7DFF] dark:hover:text-[#7EA4FF]"
+        className="cursor-pointer text-[14px] font-semibold leading-none text-[#0A58FF] underline decoration-1 underline-offset-[5px] transition hover:text-[#0847cf] dark:text-[#4F7DFF] dark:hover:text-[#7EA4FF] sm:text-[15px]"
         onMouseEnter={() => setIsVisible(true)}
         onMouseLeave={() => setIsVisible(false)}
         onFocus={() => setIsVisible(true)}
@@ -17,9 +17,9 @@ export default function HowItWorksTooltip() {
       </button>
 
       {isVisible ? (
-        <div className="absolute left-0 top-full z-30 mt-3 w-[390px] max-w-[calc(100vw-2rem)]">
+        <div className="absolute left-1/2 top-full z-30 mt-3 w-[320px] -translate-x-1/2 max-w-[calc(100vw-2rem)] sm:w-[390px]">
           <div className="relative rounded-[14px] bg-[#111827] px-4 py-3 text-[14px] leading-[1.45] text-white shadow-[0_18px_30px_rgba(15,23,42,0.35)] dark:bg-white dark:text-slate-900 dark:shadow-[0_18px_30px_rgba(15,23,42,0.16)]">
-            <span className="absolute left-16 top-[-6px] h-3 w-3 rotate-45 bg-[#111827] dark:bg-white" />
+            <span className="absolute left-1/2 top-[-6px] h-3 w-3 -translate-x-1/2 rotate-45 bg-[#111827] dark:bg-white" />
             Lorem ipsum dolor sit amet consectetur. Euismod id posuere nibh
             semper mattis scelerisque tellus. Vel mattis diam duis morbi tellus
             dui consectetur.{" "}

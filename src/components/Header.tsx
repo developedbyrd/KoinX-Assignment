@@ -3,13 +3,14 @@ import ThemeToggle from "./ThemeToggle";
 export default function Header() {
   return (
     <header className="bg-white/95 shadow-[0_1px_0_rgba(15,23,42,0.04)] backdrop-blur-xl dark:bg-[#161824] dark:shadow-[0_1px_0_rgba(255,255,255,0.06)]">
-      <div className="mx-auto flex w-full max-w-[1680px] items-center justify-between px-10 py-4 md:px-16 lg:px-16">
+      <div className="mx-auto flex w-full max-w-[1680px] items-center justify-between px-4 py-3 sm:px-6 sm:py-4 md:px-16 lg:px-16">
         <svg
           width="96"
           height="24"
           viewBox="0 0 96 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          className="h-6 w-auto sm:h-7"
         >
           <path
             d="M40.5015 3.59717L40.4888 3.60986C40.9613 4.23022 40.7747 5.34741 39.9624 6.25342C39.1012 7.21306 37.9181 7.51189 37.2544 7.00928L37.2515 7.01318L36.439 6.41064L36.7925 6.03955C36.7695 5.44602 37.0446 4.73953 37.5698 4.15381C38.1456 3.51178 38.903 3.14791 39.5405 3.16064L39.8921 2.79346L40.5015 3.59717Z"

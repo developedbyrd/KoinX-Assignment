@@ -39,7 +39,7 @@ function GainRow({
 }) {
   return (
     <div
-      className={`grid grid-cols-[1.15fr_1fr_1fr] items-center gap-3 py-2 text-[14px] md:text-[15px] ${
+      className={`grid grid-cols-[1.15fr_1fr_1fr] items-center gap-2 py-2 text-[13px] sm:gap-3 sm:text-[14px] md:text-[15px] ${
         isEmphasized ? "pt-1 font-semibold" : "font-medium"
       } ${isPrimary ? "text-white" : "text-slate-900 dark:text-white"}`}
     >
@@ -66,18 +66,18 @@ function GainPanel({
 }: GainPanelProps) {
   return (
     <section
-      className={`flex h-full flex-col rounded-lg px-4 py-2 ${
+      className={`flex h-full flex-col rounded-lg px-4 py-3 sm:px-5 sm:py-4 ${
         isPrimary
           ? "bg-[linear-gradient(180deg,_#3191FF_0%,_#006AF5_100%)] text-white shadow-[0_28px_70px_rgba(7,89,196,0.28)] dark:shadow-[0_28px_70px_rgba(0,0,0,0.36)]"
           : "bg-white text-slate-900 shadow-[0_18px_50px_rgba(15,23,42,0.08)] dark:bg-[#1A1E2B] dark:text-white dark:shadow-[0_22px_55px_rgba(0,0,0,0.28)]"
       }`}
     >
-      <h2 className="font-heading text-[20px] font-semibold tracking-[-0.02em] md:text-[21px] dark:text-white">
+      <h2 className="font-heading text-[18px] font-semibold tracking-[-0.02em] dark:text-white sm:text-[20px] md:text-[21px]">
         {title}
       </h2>
 
       <div className="mt-4 flex-1">
-        <div className="grid grid-cols-[1.15fr_1fr_1fr] items-center gap-3 pb-1 text-[14px] md:text-[15px]">
+        <div className="grid grid-cols-[1.15fr_1fr_1fr] items-center gap-2 pb-1 text-[13px] sm:gap-3 sm:text-[14px] md:text-[15px]">
           <span />
           <span
             className={`text-center font-medium ${
@@ -116,16 +116,16 @@ function GainPanel({
         />
       </div>
 
-      <div className="mt-4 flex items-center gap-3 md:gap-4">
+      <div className="mt-4 flex items-center gap-2 sm:gap-3 md:gap-4">
         <span
-          className={`font-heading text-xl font-medium ${
+          className={`font-heading text-[16px] font-medium sm:text-[18px] md:text-xl ${
             isPrimary ? "text-white" : "text-slate-900 dark:text-white"
           }`}
         >
           {footerLabel}
         </span>
         <span
-          className={`text-[24px] font-semibold tracking-[-0.03em] ${
+          className={`text-[20px] font-semibold tracking-[-0.03em] sm:text-[22px] md:text-[24px] ${
             isPrimary ? "text-white" : "text-slate-900 dark:text-white"
           }`}
         >
@@ -134,7 +134,7 @@ function GainPanel({
       </div>
 
       {showSavings && savings !== undefined && savings > 0 ? (
-        <div className="mt-auto flex items-center gap-2 pt-5 text-[13px] font-medium text-white md:text-[14px]">
+        <div className="mt-auto flex items-center gap-2 pt-5 text-[12px] font-medium text-white sm:text-[13px] md:text-[14px]">
           <span className="text-[18px] leading-none">🎉</span>
           <span>
             You are going to save upto{" "}

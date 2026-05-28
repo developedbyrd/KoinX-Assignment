@@ -27,11 +27,11 @@ export default function ThemeToggle() {
       onClick={() => setIsDark((value) => !value)}
       aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
       aria-pressed={isDark}
-      className="group cursor-pointer inline-flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-white/80 text-slate-600 shadow-[0_1px_6px_rgba(15,23,42,0.08)] backdrop-blur transition-all duration-200 hover:shadow-[0_6px_18px_rgba(15,23,42,0.12)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1557FF]/50 dark:border-slate-700 dark:bg-slate-900/70 dark:text-slate-200 dark:shadow-[0_1px_10px_rgba(0,0,0,0.35)] dark:hover:shadow-[0_10px_24px_rgba(0,0,0,0.4)]"
+      className="group inline-flex h-8 w-8 cursor-pointer items-center justify-center rounded-full border border-slate-200 bg-white/80 text-slate-600 shadow-[0_1px_6px_rgba(15,23,42,0.08)] backdrop-blur transition-all duration-200 hover:shadow-[0_6px_18px_rgba(15,23,42,0.12)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1557FF]/50 sm:h-9 sm:w-9 dark:border-slate-700 dark:bg-slate-900/70 dark:text-slate-200 dark:shadow-[0_1px_10px_rgba(0,0,0,0.35)] dark:hover:shadow-[0_10px_24px_rgba(0,0,0,0.4)]"
     >
       {isDark ? (
         <svg
-          className="h-4 w-4"
+          className="h-3.5 w-3.5 sm:h-4 sm:w-4"
           viewBox="0 0 24 24"
           fill="currentColor"
           aria-hidden="true"
@@ -40,7 +40,7 @@ export default function ThemeToggle() {
         </svg>
       ) : (
         <svg
-          className="h-4 w-4 text-amber-500"
+          className="h-3.5 w-3.5 text-amber-500 sm:h-4 sm:w-4"
           viewBox="0 0 24 24"
           fill="currentColor"
           aria-hidden="true"

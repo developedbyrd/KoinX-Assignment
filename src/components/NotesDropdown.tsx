@@ -16,11 +16,11 @@ export default function NotesDropdown() {
       <button
         type="button"
         onClick={() => setIsOpen((value) => !value)}
-        className="flex w-full cursor-pointer items-center justify-between gap-4 px-3 py-2 text-left"
+        className="flex w-full cursor-pointer items-center justify-between gap-3 px-4 py-3 text-left sm:gap-4"
         aria-expanded={isOpen}
       >
-        <div className="flex items-center gap-1 text-slate-900 dark:text-white">
-          <span className="flex h-7 w-7 items-center justify-center text-[#1557FF] dark:text-[#6C95FF]">
+        <div className="flex items-center gap-2 text-slate-900 dark:text-white">
+          <span className="flex h-7 w-7 items-center justify-center text-[#1557FF] dark:text-[#6C95FF] sm:h-8 sm:w-8">
             <svg
               className="h-6 w-6"
               viewBox="0 0 24 24"
@@ -63,7 +63,7 @@ export default function NotesDropdown() {
         }`}
       >
         <div className="overflow-hidden">
-          <ul className="list-disc space-y-2 px-6 pb-5 pl-11 pr-6 text-[13px] leading-[1.45] text-slate-900 dark:text-slate-100 md:text-[14px]">
+          <ul className="list-disc space-y-2 px-5 pb-4 pl-10 pr-5 text-[12px] leading-[1.45] text-slate-900 dark:text-slate-100 sm:px-6 sm:pb-5 sm:pl-11 sm:pr-6 sm:text-[13px] md:text-[14px]">
             {notes.map((note) => (
               <li key={note} className="pl-1">
                 {note}

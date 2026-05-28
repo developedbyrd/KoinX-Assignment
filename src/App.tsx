@@ -136,10 +136,10 @@ export default function App() {
       <div className="relative z-10">
         <Header />
 
-        <main className="relative z-10 mx-auto w-full max-w-[1680px] px-10 pt-8 pb-10 dark:bg-[#0a0a12] md:px-16 lg:px-16">
+        <main className="relative z-10 mx-auto w-full max-w-[1680px] px-4 pt-6 pb-8 dark:bg-[#0a0a12] sm:px-5 sm:pt-8 sm:pb-10 md:px-16 lg:px-16">
           <div className="flex flex-col gap-4">
-            <div className="flex flex-wrap items-center gap-4">
-              <h1 className="font-heading text-[36px] font-semibold leading-[1.05] tracking-[-0.04em] max-md:text-[28px] dark:text-white">
+            <div className="flex items-baseline gap-2 sm:gap-3 md:gap-4">
+              <h1 className="font-heading text-[24px] font-semibold leading-[1.05] tracking-[-0.04em] sm:text-[28px] lg:text-[36px] dark:text-white">
                 Tax Harvesting
               </h1>
               <HowItWorksTooltip />
