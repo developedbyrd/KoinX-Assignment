@@ -4,10 +4,10 @@ export default function HowItWorksTooltip() {
   const [isVisible, setIsVisible] = useState(false);
 
   return (
-    <div className="relative inline-flex">
+    <div className="relative inline-flex top-1">
       <button
         type="button"
-        className="cursor-pointer text-[14px] font-semibold leading-none text-[#0A58FF] underline decoration-1 underline-offset-[5px] transition hover:text-[#0847cf] dark:text-[#4F7DFF] dark:hover:text-[#7EA4FF] sm:text-[15px]"
+        className="cursor-pointer text-[14px] font-semibold leading-none text-[#0A58FF] underline decoration-1 underline-offset-[5px] transition hover:text-[#0847cf] dark:text-[#4F7DFF] dark:hover:text-[#7EA4FF] sm:text-[18px]"
         onMouseEnter={() => setIsVisible(true)}
         onMouseLeave={() => setIsVisible(false)}
         onFocus={() => setIsVisible(true)}

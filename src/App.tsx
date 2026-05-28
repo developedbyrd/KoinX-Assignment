@@ -138,7 +138,7 @@ export default function App() {
 
         <main className="relative z-10 mx-auto w-full max-w-[1680px] px-4 pt-6 pb-8 dark:bg-[#0a0a12] sm:px-5 sm:pt-8 sm:pb-10 md:px-16 lg:px-16">
           <div className="flex flex-col gap-4">
-            <div className="flex items-baseline gap-2 sm:gap-3 md:gap-4">
+            <div className="flex items-center gap-2 sm:gap-3 md:gap-5">
               <h1 className="font-heading text-[24px] font-semibold leading-[1.05] tracking-[-0.04em] sm:text-[28px] lg:text-[36px] dark:text-white">
                 Tax Harvesting
               </h1>
