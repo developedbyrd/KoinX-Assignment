@@ -107,10 +107,6 @@ src/
 - Currency displayed in INR.
 - Holdings default to first 5 rows with View All expansion.
 
-## Screenshots
-
-Add screenshots before submission.
-
 ## Deployment
 
 ```bash
